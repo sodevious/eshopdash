@@ -1,0 +1,18 @@
+
+
+[
+  {
+    "model": "marketplaces.marketplace",
+    "fields": {
+      "name": "Goodwill",
+      "slug": "goodwill"
+    }
+  },
+  {
+    "model": "marketplaces.marketplace",
+    "fields": {
+      "name": "eBay",
+      "slug": "ebay"
+    }
+  }
+]
