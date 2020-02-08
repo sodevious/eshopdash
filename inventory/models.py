@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from marketplaces.models import Marketplace
 
 # this needs to be an app
 INVENTORY_CATEGORY_CHOICES = [
@@ -12,11 +13,7 @@ class Item(models.Model):
     meta = models.CharField(max_length=200, default='', null=True, blank=True)
     purchase_date = models.DateField('Date item was purchased', null=True, blank=True)
     purchase_price = models.FloatField(help_text="include sales tax if any", null=True, blank=True)
-    purchased_from = models.CharField(
-        max_length=24,
-        choices=settings.MARKETPLACE_CHOICES,
-        default='goodwill',
-    )
+    purchased_marketplace = models.ForeignKey(Marketplace, on_delete=models.CASCADE, null=True, blank=True)
     quantity = models.PositiveIntegerField(default=1, help_text='average per item')
     weight = models.FloatField(null=True, blank=True)
     category = models.CharField(
@@ -33,18 +30,6 @@ class Item(models.Model):
         null=True,
         blank=True
     )
-    # listing_date = models.DateField(help_text='To calculate sell through rate', null=True, blank=True)
-    # sale_price = models.PositiveIntegerField(null=True, blank=True)
-    # sale_fees = models.PositiveIntegerField(null=True, blank=True)
-    # shipping_fees = models.PositiveIntegerField(null=True, blank=True)
-    # sold_date = models.DateField('Date item was sold', null=True, blank=True)
-    # sold_at = models.CharField(
-    #     max_length=24,
-    #     choices=MARKETPLACE_CHOICES,
-    #     default='',
-    #     null=True,
-    #     blank=True
-    # )
 
     def __str__(self):
         return self.name
@@ -52,7 +37,7 @@ class Item(models.Model):
 class Expense(models.Model):
     purchase_date = models.DateField('Date item was purchased', null=True, blank=True)
     purchase_price = models.FloatField('Date item was sold', null=True, blank=True)
-    purchased_from = models.PositiveIntegerField(null=True, blank=True)
+    purchased_marketplace = models.ForeignKey(Marketplace, on_delete=models.CASCADE, null=True, blank=True)
     quantity = models.PositiveIntegerField(default=1)
     # category
 
