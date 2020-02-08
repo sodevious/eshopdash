@@ -1,5 +1,3 @@
-
-
 [
   {
     "model": "marketplaces.marketplace",
@@ -13,6 +11,111 @@
     "fields": {
       "name": "eBay",
       "slug": "ebay"
+    }
+  },
+  {
+    "model": "marketplaces.marketplace",
+    "fields": {
+      "name": "Ross",
+      "slug": "ross"
+    }
+  },
+  {
+    "model": "marketplaces.marketplace",
+    "fields": {
+      "name": "Dollar Tree",
+      "slug": "dollar_tree"
+    }
+  },
+  {
+    "model": "marketplaces.marketplace",
+    "fields": {
+      "name": "Bulq",
+      "slug": "bulq"
+    }
+  },
+  {
+    "model": "marketplaces.marketplace",
+    "fields": {
+      "name": "Source Liquidations",
+      "slug": "source"
+    }
+  },
+  {
+    "model": "marketplaces.marketplace",
+    "fields": {
+      "name": "Via Trading",
+      "slug": "via"
+    }
+  },
+  {
+    "model": "marketplaces.marketplace",
+    "fields": {
+      "name": "Poshmark",
+      "slug": "poshmark"
+    }
+  },
+  {
+    "model": "marketplaces.marketplace",
+    "fields": {
+      "name": "Etsy",
+      "slug": "etsy"
+    }
+  },
+  {
+    "model": "marketplaces.marketplace",
+    "fields": {
+      "name": "Salvation Army",
+      "slug": "salvation_army"
+    }
+  },
+  {
+    "model": "marketplaces.marketplace",
+    "fields": {
+      "name": "CVS",
+      "slug": "cvs"
+    }
+  },
+  {
+    "model": "marketplaces.marketplace",
+    "fields": {
+      "name": "Mercari",
+      "slug": "mercari"
+    }
+  },
+  {
+    "model": "marketplaces.marketplace",
+    "fields": {
+      "name": "Amazon",
+      "slug": "amazon"
+    }
+  },
+  {
+    "model": "marketplaces.marketplace",
+    "fields": {
+      "name": "TJ Maxx",
+      "slug": "tj_maxx"
+    }
+  },
+  {
+    "model": "marketplaces.marketplace",
+    "fields": {
+      "name": "Ross",
+      "slug": "ross"
+    }
+  },
+  {
+    "model": "marketplaces.marketplace",
+    "fields": {
+      "name": "Marshalls",
+      "slug": "marshalls"
+    }
+  },
+  {
+    "model": "marketplaces.marketplace",
+    "fields": {
+      "name": "Other",
+      "slug": "other"
     }
   }
 ]

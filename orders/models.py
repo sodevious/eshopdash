@@ -1,6 +1,8 @@
 from django.db import models
-from inventory.models import Item
 from django.conf import settings
+
+from marketplaces.models import Marketplace
+from inventory.models import Item
 
 LOCATION_CHOICES = [
     ('domestic', 'Domestic'),
@@ -25,13 +27,7 @@ class Order(models.Model):
         default='first_class'
     )
     sold_date = models.DateField('Date item was sold', null=True, blank=True)
-    sold_at = models.CharField(
-        max_length=24,
-        choices=settings.MARKETPLACE_CHOICES,
-        default='',
-        null=True,
-        blank=True
-    )
+    sold_marketplace = models.ForeignKey(Marketplace, on_delete=models.CASCADE, null=True, blank=True)
     type = models.CharField(
         max_length=24,
         choices=LOCATION_CHOICES,
