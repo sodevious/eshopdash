@@ -4,7 +4,7 @@ chardet==3.0.4
 click==5.1
 data-wizard==1.2.0
 Django==3.0.3
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 html-json-forms==1.1.1
 idna==2.8
 natural-keys==1.6.0
